@@ -57,6 +57,7 @@ class Courtyard extends egret.Sprite {
 		if (event.target.y < 500 && event.target.y != 0) {
 
 			this.removeChild(event.target);
+			
 			Data.AddClover();
 			Data.save();
 			event.target.removeEventListener(egret.Event.ENTER_FRAME, this.clear, this);
@@ -68,7 +69,7 @@ class Courtyard extends egret.Sprite {
 	private grassclear(event: egret.Event) {
 		for (let i: number = 0; i < Data.grasslist.length; i++) {
 			if (event.target.x == Data.grasslist[i][0] && event.target.y == Data.grasslist[i][1]) {
-				Data.grasslist[i][2] = false;
+				Data.grasslist[i][2] = 0;
 
 			}
 		}

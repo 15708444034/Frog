@@ -31,6 +31,7 @@ var Data = (function () {
         var temp = 0;
         for (var i = 0; i < this.grasslist.length; i++) {
             var x = Math.random();
+            this.grasslist[i][2] = 1;
             var str = void 0;
             if (x < 0.1) {
                 this.grasslist[i][3] = "clover_166_png";
@@ -92,6 +93,17 @@ var Data = (function () {
         var value = this.clovernumber.toString();
         egret.localStorage.setItem(this.key, value);
     };
+    Data.loadgrasstime = function () {
+        var timestr = egret.localStorage.getItem(this.grasstime);
+        var time = parseInt(timestr);
+        return time;
+    };
+    Data.savegrasstime = function () {
+        var timestamp3 = new Date().getTime();
+        var value = timestamp3.toString();
+        egret.localStorage.setItem(this.grasstime, value);
+    };
+    Data.grasstime = "grasstime";
     Data.key = "clovernumber";
     Data.isfirst = "isfirst";
     Data._screenWidth = 0;

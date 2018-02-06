@@ -1,5 +1,5 @@
 class Data {
-
+    public static grasstime:string="grasstime";
     public static key: string = "clovernumber";
     public static isfirst: string = "isfirst";
     private static _screenWidth: number = 0;
@@ -65,6 +65,7 @@ class Data {
         var temp: number = 0;
         for (let i: number = 0; i < this.grasslist.length; i++) {
             var x = Math.random();
+            this.grasslist[i][2]=1;
             let str: string;
             if (x < 0.1) {
                 this.grasslist[i][3] = "clover_166_png";
@@ -137,6 +138,16 @@ class Data {
 
         var value: string = this.clovernumber.toString();
         egret.localStorage.setItem(this.key, value);
+    }
+    public static loadgrasstime():number{
+        let timestr=egret.localStorage.getItem(this.grasstime);
+        let time=parseInt(timestr);
+        return time;
+    }
+    public static savegrasstime(){
+        let timestamp3 = new Date().getTime();
+        var value:string=timestamp3.toString();
+        egret.localStorage.setItem(this.grasstime,value);
     }
 
 }

@@ -150,6 +150,8 @@ var Main = (function (_super) {
         Data.readShopTable();
         this.control = new Control();
         this.addChild(this.control);
+        var timestamp3 = new Date().getTime();
+        console.log(timestamp3);
     };
     return Main;
 }(eui.UILayer));

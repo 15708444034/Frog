@@ -18,6 +18,7 @@ var Control = (function (_super) {
     }
     Control.prototype.Createhomeicon = function () {
         if (egret.localStorage.getItem(Data.isfirst) != "no") {
+            Data.savegrasstime();
             Data.initlist();
         }
         else {
@@ -27,6 +28,7 @@ var Control = (function (_super) {
         this.room = new Room();
         this.courtyard = new Courtyard();
         this.addChild(this.courtyard);
+        this.courtyard.addEventListener(egret.Event.ENTER_FRAME, this.refresh, this);
         this.Courtyardicon = new egret.Bitmap();
         this.Courtyardicon.texture = RES.getRes("icon_out_84_88_png");
         this.addChildAt(this.Courtyardicon, 0);
@@ -65,6 +67,17 @@ var Control = (function (_super) {
         this.addChild(this.reset);
         this.reset.touchEnabled = true;
         this.reset.addEventListener(egret.TouchEvent.TOUCH_BEGIN, function () { Data.reset(); }, this);
+    };
+    Control.prototype.refresh = function () {
+        var timestamp3 = new Date().getTime();
+        if (timestamp3 - Data.loadgrasstime() > 3600000) {
+            Data.savegrasstime();
+            Data.initlist();
+            this.courtyard.removeEventListener(egret.Event.ENTER_FRAME, this.refresh, this);
+            this.courtyard = new Courtyard();
+            this.courtyard.addEventListener(egret.Event.ENTER_FRAME, this.refresh, this);
+            Data.savelist();
+        }
     };
     Control.prototype.loadRoom = function () {
         this.addChildAt(this.homeicon, 0);

@@ -50,7 +50,7 @@ var Courtyard = (function (_super) {
     Courtyard.prototype.grassclear = function (event) {
         for (var i = 0; i < Data.grasslist.length; i++) {
             if (event.target.x == Data.grasslist[i][0] && event.target.y == Data.grasslist[i][1]) {
-                Data.grasslist[i][2] = false;
+                Data.grasslist[i][2] = 0;
             }
         }
         Data.savelist();

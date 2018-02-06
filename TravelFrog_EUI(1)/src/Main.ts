@@ -129,9 +129,9 @@ class Main extends eui.UILayer {
         
         this.control = new Control();
         this.addChild(this.control);
-
+ 
        
-
+      
     }
    
 }
