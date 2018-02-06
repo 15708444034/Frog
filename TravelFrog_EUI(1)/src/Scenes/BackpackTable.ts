@@ -19,5 +19,6 @@ class BackpackTable extends eui.Component implements eui.UIComponent {
 	public label0: eui.Label;
 	public label1: eui.Label;
 	public label2: eui.Label;
+	public id:string;
 
 }

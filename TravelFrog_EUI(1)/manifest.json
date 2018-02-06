@@ -16,10 +16,6 @@
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/Character/frog.js",
 		"bin-debug/DATA/Data.js",
-<<<<<<< HEAD
-		"bin-debug/DATA/DateEvent.js",
-=======
->>>>>>> 66c53803c18de8d67f23270470b263b6d656156a
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Scenes/BackpackTable.js",
 		"bin-debug/Scenes/Basket_EUI.js",

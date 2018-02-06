@@ -15,6 +15,15 @@ var RoomEUI = (function (_super) {
         _this.skinName = "RoomEUISkin";
         _this.y = Data.getscreenHeight() / 2 - _this.height / 2;
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.createScene, _this);
+        _this.image.touchEnabled = true;
+        _this.image0.touchEnabled = true;
+        _this.image1.touchEnabled = true;
+        _this.image2.touchEnabled = true;
+        _this.image3.touchEnabled = true;
+        _this.image4.touchEnabled = true;
+        _this.image5.touchEnabled = true;
+        _this.image6.touchEnabled = true;
+        _this.image7.touchEnabled = true;
         return _this;
     }
     RoomEUI.prototype.partAdded = function (partName, instance) {

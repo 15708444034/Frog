@@ -18,7 +18,6 @@ var Control = (function (_super) {
     }
     Control.prototype.Createhomeicon = function () {
         if (egret.localStorage.getItem(Data.isfirst) != "no") {
-            Data.savegrasstime();
             Data.initlist();
         }
         else {
@@ -28,7 +27,6 @@ var Control = (function (_super) {
         this.room = new Room();
         this.courtyard = new Courtyard();
         this.addChild(this.courtyard);
-        this.courtyard.addEventListener(egret.Event.ENTER_FRAME, this.refresh, this);
         this.Courtyardicon = new egret.Bitmap();
         this.Courtyardicon.texture = RES.getRes("icon_out_84_88_png");
         this.addChildAt(this.Courtyardicon, 0);

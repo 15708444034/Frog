@@ -45,6 +45,13 @@ class Data {
 
         return this.clovernumber.toString();
     }
+
+    public static subClover(num:string)
+    {
+        this.clovernumber = parseInt(egret.localStorage.getItem(this.key));
+        this.clovernumber-=parseInt(num);
+        this.save();
+    }
     public static AddClover() {
 
 
