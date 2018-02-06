@@ -29,26 +29,40 @@ var Room = (function (_super) {
         this.iconTrip.y += Data.getscreenHeight() - this.iconTrip.height - 10;
         this.iconTrip.touchEnabled = true;
         this.iconTrip.addEventListener(egret.TouchEvent.TOUCH_END, this.TouchTrip, this);
-        this.myfrog = new Frog();
-        this.addChild(this.myfrog);
     };
     Room.prototype.TouchTrip = function () {
         if (!this.getChildByName("Trip")) {
-            this.addChild(this.bagsSprite);
+            this.addChild(this.roomEUI);
         }
         else {
-            this.removeChild(this.bagsSprite);
+            this.removeChild(this.roomEUI);
         }
     };
     Room.prototype.createBags = function () {
-        this.bagsSprite = new egret.Sprite();
-        this.bagsSprite.name = "Trip";
-        var roomEUI = new RoomEUI();
-        this.bagsSprite.addChild(roomEUI);
-        roomEUI.buttonXL.addEventListener(egret.TouchEvent.TOUCH_END, this.TouchTrip, this);
-        roomEUI.buttonXR.addEventListener(egret.TouchEvent.TOUCH_END, this.TouchTrip, this);
+        this.roomEUI = new RoomEUI();
+        this.roomEUI.name = "Trip";
+        this.roomEUI.buttonXL.addEventListener(egret.TouchEvent.TOUCH_END, this.TouchTrip, this);
+        this.roomEUI.buttonXR.addEventListener(egret.TouchEvent.TOUCH_END, this.TouchTrip, this);
+        this.roomEUI.button0.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.button1.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.button2.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.button3.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.button4.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.button5.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.button6.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.button7.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.button8.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.backpack_EUI = new Backpack_EUI();
+        this.backpack_EUI.name = "Backpack";
+        this.backpack_EUI.buttonX.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
     };
-    Room.prototype.Finish = function () {
+    Room.prototype.openBackpack = function () {
+        if (!this.getChildByName("Backpack")) {
+            this.addChild(this.backpack_EUI);
+        }
+        else {
+            this.removeChild(this.backpack_EUI);
+        }
     };
     return Room;
 }(egret.Sprite));

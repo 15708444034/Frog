@@ -3,62 +3,138 @@
 	<w:Declarations>
 	</w:Declarations>
 	<w:Config id="1614b34a05f" ></w:Config>
-	<e:Image source="frame_kaban_png" width="400" height="500" left="120" top="0" scale9Grid="13,14,474,202"/>
-	<e:Image source="frame_tsukue_png" width="400" height="500" top="0" scale9Grid="13,13,473,203" right="120"/>
-	<e:Button id="buttonR" label="" enabled="true" x="492.5" verticalCenter="0">
-		<e:skinName>
+	<e:Group x="120" y="0">
+		<e:Image source="frame_kaban_png" width="400" height="500" scale9Grid="13,14,474,202" x="0" y="0"/>
+		<e:Image source="frame_tsukue_png" width="400" height="500" scale9Grid="13,13,473,203" x="640" y="0"/>
+		<e:Image source="kaban_png" x="120" y="25"/>
+		<e:Image source="tsukue_frame_01_png" x="39" y="108.33" anchorOffsetX="0" width="150" anchorOffsetY="0" height="112.67"/>
+		<e:Image source="tsukue_frame_02_png" x="218.33" y="108.33" anchorOffsetX="0" width="139.34" anchorOffsetY="0" height="110"/>
+		<e:Image source="tsukue_frame_03_png" x="114" y="250" anchorOffsetX="0" width="178" anchorOffsetY="0" height="112.67"/>
+		<e:Image source="tsukue_png" x="759" y="22.5"/>
+		<e:Image source="tsukue_frame_01_png" x="663" y="101" anchorOffsetX="0" width="172.67" anchorOffsetY="0" height="100.67"/>
+		<e:Image source="tsukue_frame_02_png" x="843.67" y="99.67" anchorOffsetX="0" width="171.33" anchorOffsetY="0" height="102"/>
+		<e:Image source="tsukue_frame_03_png" x="668.67" y="250" anchorOffsetX="0" width="350" anchorOffsetY="0" height="134"/>
+	</e:Group>
+	<e:Group x="192" y="-2.5">
+		<e:Button id="button0" label="" x="0" y="141.5" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="scroll_r_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
-		</e:skinName>
-	</e:Button>
-	<e:Button id="buttonL" label="" x="732.5" enabled="true" verticalCenter="0">
-		<e:skinName>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="button1" label="" x="170" y="141.5" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="scroll_l_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
-		</e:skinName>
-	</e:Button>
-	<e:Image source="kaban_png" x="240" y="25"/>
-	<e:Image source="tsukue_frame_01_png" x="159" y="108.33" anchorOffsetX="0" width="150" anchorOffsetY="0" height="112.67"/>
-	<e:Image source="tsukue_frame_02_png" x="338.33" y="108.33" anchorOffsetX="0" width="139.34" anchorOffsetY="0" height="110"/>
-	<e:Image source="tsukue_frame_03_png" x="234" y="250" anchorOffsetX="0" width="178" anchorOffsetY="0" height="112.67"/>
-	<e:Button id="buttonFinish" label="" x="220" y="408" enabled="true">
-		<e:skinName>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="button2" label="" x="86" y="285.5" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="kanryou_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
-		</e:skinName>
-	</e:Button>
-	<e:Image source="tsukue_png" x="879" y="22.5"/>
-	<e:Image source="tsukue_frame_01_png" x="783" y="101" anchorOffsetX="0" width="172.67" anchorOffsetY="0" height="100.67"/>
-	<e:Image source="tsukue_frame_02_png" x="963.67" y="99.67" anchorOffsetX="0" width="171.33" anchorOffsetY="0" height="102"/>
-	<e:Image source="tsukue_frame_03_png" x="788.67" y="250" anchorOffsetX="0" width="350" anchorOffsetY="0" height="134"/>
-	<e:Button id="buttonXL" label="" x="470" y="-2.5" enabled="true">
-		<e:skinName>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="button3" label="" x="595.5" y="131.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="close_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
-		</e:skinName>
-	</e:Button>
-	<e:Button id="buttonXR" label="" x="1110" y="0" enabled="true">
-		<e:skinName>
-		<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="close_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-		</e:Skin>
-		</e:skinName>
-	</e:Button>
-	<e:Button id="buttonClear" label="" x="855" y="408" enabled="true">
-		<e:skinName>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="button4" label="" x="679.67" y="131.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
 			<e:Skin states="up,down,disabled">
-			<e:Image width="100%" height="100%" source="katadukeru_png"/>
-			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
 			</e:Skin>
-		</e:skinName>
-	</e:Button>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="button5" label="" x="775" y="131.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="button6" label="" x="859" y="131.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="button7" label="" x="663" y="297.17" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="button8" label="" x="807" y="297.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="sentaku_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="buttonL" label="" x="540.5" enabled="true" y="209.5">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="scroll_l_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="buttonR" label="" enabled="true" x="300.5" y="209.5">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="scroll_r_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="buttonFinish" label="" x="28" y="410.5" enabled="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="kanryou_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="buttonXL" label="" x="278" y="0" enabled="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="close_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="buttonXR" label="" x="918" y="2.5" enabled="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="close_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="buttonClear" label="" x="663" y="410.5" enabled="true">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="katadukeru_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
 </e:Skin>

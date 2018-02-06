@@ -121,17 +121,82 @@ class Main extends eui.UILayer {
      * 创建场景界面
      * Create scene interface
      */
-	private control:Control;
+	private courtyard: Courtyard;
+    private room: Room;
+    private shop_EUI:Shop_EUI;
      
     protected createGameScene(): void {
 
-        
-	  
-        this.control = new Control();
-        this.addChild(this.control);
+        Data.readShopTable();
 
+        this.shop_EUI=new Shop_EUI();
+        //this.addChild(this.shop_EUI);
+
+	    Data.initlist();
+        this.courtyard = new Courtyard();
+        this.addChild(this.courtyard);
+
+        let icon = new egret.Bitmap();
+        icon.texture = RES.getRes("icon_house_84_88_png");
+        this.addChild(icon);
+        icon.x = Data.getscreenWidth() - icon.width - 15;
+        icon.y = Data.getscreenHeight() - icon.height - 10;
+        icon.touchEnabled=true;
+        icon.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.loadRoom,this);
+
+        let clover = new egret.Bitmap();
+        clover.texture = RES.getRes("sys_clover_window_png");
+        this.addChild(clover);
+        clover.x = 15;
+        clover.y = 10;
+
+        let clovertext = new egret.TextField;
+        clovertext.text = "113";
+        clovertext.textColor = 0;
+        clovertext.x = 150;
+        clovertext.y = 30;
+        this.addChild(clovertext);
        
+        
 
     }
-   
+    private loadRoom(){
+        this.removeChild(this.courtyard);
+        this.room=new Room(); 
+        this.addChild(this.room);
+         let icon = new egret.Bitmap();
+        icon.texture = RES.getRes("icon_house_84_88_png");
+        this.addChild(icon);
+        icon.x = Data.getscreenWidth() - icon.width - 15;
+        icon.y = Data.getscreenHeight() - icon.height - 10;
+        icon.touchEnabled=true;
+        icon.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.loadCourtyard,this);
+
+    }
+    private loadCourtyard(){
+        this.courtyard = new Courtyard();
+        this.addChild(this.courtyard);
+
+        let icon = new egret.Bitmap();
+        icon.texture = RES.getRes("icon_house_84_88_png");
+        this.addChild(icon);
+        icon.x = Data.getscreenWidth() - icon.width - 15;
+        icon.y = Data.getscreenHeight() - icon.height - 10;
+        icon.touchEnabled=true;
+        icon.addEventListener(egret.TouchEvent.TOUCH_BEGIN,this.loadRoom,this);
+
+        let clover = new egret.Bitmap();
+        clover.texture = RES.getRes("sys_clover_window_png");
+        this.addChild(clover);
+        clover.x = 15;
+        clover.y = 10;
+
+        let clovertext = new egret.TextField;
+        clovertext.text = "113";
+        clovertext.textColor = 0;
+        clovertext.x = 150;
+        clovertext.y = 30;
+        this.addChild(clovertext);
+    }
+    
 }
