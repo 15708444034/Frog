@@ -16,78 +16,6 @@
 		<e:Image source="tsukue_frame_03_png" x="668.67" y="250" anchorOffsetX="0" width="350" anchorOffsetY="0" height="134"/>
 	</e:Group>
 	<e:Group x="192" y="-2.5">
-		<e:Button id="button0" label="" x="0" y="141.5" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="button1" label="" x="170" y="141.5" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="button2" label="" x="86" y="285.5" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="button3" label="" x="595.5" y="131.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="button4" label="" x="679.67" y="131.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="button5" label="" x="775" y="131.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="button6" label="" x="859" y="131.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="button7" label="" x="663" y="297.17" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
-		<e:Button id="button8" label="" x="807" y="297.83" anchorOffsetX="0" width="84" anchorOffsetY="0" height="68" enabled="true">
-			<e:skinName>
-			<e:Skin states="up,down,disabled">
-				<e:Image width="100%" height="100%" source="sentaku_png"/>
-				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
-			</e:Skin>
-			</e:skinName>
-		</e:Button>
 		<e:Button id="buttonL" label="" x="540.5" enabled="true" y="209.5">
 			<e:skinName>
 			<e:Skin states="up,down,disabled">
@@ -136,5 +64,14 @@
 			</e:Skin>
 			</e:skinName>
 		</e:Button>
+		<e:Image id="image" width="66" height="51" x="9" y="153.17" anchorOffsetX="0" anchorOffsetY="0" source="sentaku_png"/>
+		<e:Image width="66" height="51" x="187" y="153.17" anchorOffsetX="0" anchorOffsetY="0" id="image0" source="sentaku_png"/>
+		<e:Image width="66" height="51" x="98" y="294" anchorOffsetX="0" anchorOffsetY="0" id="image1" source="sentaku_png"/>
+		<e:Image width="66" height="51" x="611.34" y="137.67" anchorOffsetX="0" anchorOffsetY="0" id="image2" source="sentaku_png"/>
+		<e:Image width="66" height="51" x="687" y="137.67" anchorOffsetX="0" anchorOffsetY="0" id="image3" source="sentaku_png"/>
+		<e:Image width="66" height="51" x="783" y="140.33" anchorOffsetX="0" anchorOffsetY="0" id="image4" source="sentaku_png"/>
+		<e:Image width="66" height="51" x="873" y="140.33" anchorOffsetX="0" anchorOffsetY="0" id="image5" source="sentaku_png"/>
+		<e:Image width="66" height="51" x="677.34" y="314.17" anchorOffsetX="0" anchorOffsetY="0" id="image6" source="sentaku_png"/>
+		<e:Image width="66" height="51" x="824.34" y="314.17" anchorOffsetX="0" anchorOffsetY="0" id="image7" source="sentaku_png"/>
 	</e:Group>
 </e:Skin>

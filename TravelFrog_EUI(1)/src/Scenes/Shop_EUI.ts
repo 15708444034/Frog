@@ -73,7 +73,12 @@ class Shop_EUI extends eui.Component implements eui.UIComponent {
 		}
 		else
 		{
-			Data.Buy(e.currentTarget.id);
+			if(parseInt(Data.Clovernumber())>parseInt(e.currentTarget.Price0.text))
+			{
+				Data.subClover(e.currentTarget.Price0.text);
+				Data.Buy(e.currentTarget.id);
+			}
+			
 		}
 	}
 

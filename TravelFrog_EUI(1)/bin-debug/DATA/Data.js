@@ -16,6 +16,11 @@ var Data = (function () {
     Data.Clovernumber = function () {
         return this.clovernumber.toString();
     };
+    Data.subClover = function (num) {
+        this.clovernumber = parseInt(egret.localStorage.getItem(this.key));
+        this.clovernumber -= parseInt(num);
+        this.save();
+    };
     Data.AddClover = function () {
         this.clovernumber = parseInt(egret.localStorage.getItem(this.key));
         this.clovernumber++;

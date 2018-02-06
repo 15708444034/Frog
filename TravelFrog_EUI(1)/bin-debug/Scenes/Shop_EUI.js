@@ -68,7 +68,10 @@ var Shop_EUI = (function (_super) {
             this.Txt.text = Data.ShopTable[e.currentTarget.id][6];
         }
         else {
-            Data.Buy(e.currentTarget.id);
+            if (parseInt(Data.Clovernumber()) > parseInt(e.currentTarget.Price0.text)) {
+                Data.subClover(e.currentTarget.Price0.text);
+                Data.Buy(e.currentTarget.id);
+            }
         }
     };
     return Shop_EUI;

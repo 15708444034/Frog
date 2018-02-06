@@ -4,6 +4,15 @@ class RoomEUI extends eui.Component implements eui.UIComponent {
 		this.skinName = "RoomEUISkin";
 		this.y = Data.getscreenHeight() / 2 - this.height / 2;
 		this.addEventListener(egret.Event.ADDED_TO_STAGE,this.createScene,this);
+		this.image.touchEnabled=true;
+		this.image0.touchEnabled=true;
+		this.image1.touchEnabled=true;
+		this.image2.touchEnabled=true;
+		this.image3.touchEnabled=true;
+		this.image4.touchEnabled=true;
+		this.image5.touchEnabled=true;
+		this.image6.touchEnabled=true;
+		this.image7.touchEnabled=true;
 
 	}
 
@@ -22,15 +31,15 @@ class RoomEUI extends eui.Component implements eui.UIComponent {
 	public buttonXL: eui.Button;
 	public buttonXR: eui.Button;
 	public buttonClear: eui.Button;
-	public button0: eui.Button;
-	public button1: eui.Button;
-	public button2: eui.Button;
-	public button3: eui.Button;
-	public button4: eui.Button;
-	public button5: eui.Button;
-	public button6: eui.Button;
-	public button7: eui.Button;
-	public button8: eui.Button;
+	public image: eui.Button;
+	public image0: eui.Button;
+	public image1: eui.Button;
+	public image2: eui.Button;
+	public image3: eui.Button;
+	public image4: eui.Button;
+	public image5: eui.Button;
+	public image6: eui.Button;
+	public image7: eui.Button;
 
 
 	private createScene() 
