@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,back_mainIn_png,bg_jpg,close_png,egret_icon_png,frame_kaban_png,frame_tsukue_png,haikei_niwa_png,icon_house_84_88_png,icon_out_84_88_png,kaban_png,kanryou_png,scroll_l_png,scroll_r_png,tsukue_frame_01_png,tsukue_frame_02_png,tsukue_frame_03_png,Z11_png,katadukeru_png,tsukue_png,clover_154_png,clover_160_png,clover_166_png,sys_clover_window_png,PropsTable_txt,shop_tenpo_ue_png,shop_kago_b_png,shop_kago_g_png,shop_kago_p_png,shop_kago_y_png,shop_tana_png,shop_setumei_png,raffle_84_88_png,goods_0_png,goods_3_png,goods_2_png,goods_5_png,goods_1_png,goods_4_png,goods_6_png,goods_16_png,goods_17_png,goods_18_png,goods_10_png,goods_11_png,goods_12_png,goods_13_png,goods_14_png,goods_15_png,goods_7_png,goods_8_png,goods_9_png,shop_tenpo_sita_png,label_04_png,button_empty_png,read_png,eat_json,eat_png,read_json,motimono_png,sentaku_png,icon_shop_84_88_png,frame_01_png,mail_yotuba_png",
+			"keys": "description_json,back_mainIn_png,bg_jpg,close_png,egret_icon_png,frame_kaban_png,frame_tsukue_png,haikei_niwa_png,icon_house_84_88_png,icon_out_84_88_png,kaban_png,kanryou_png,scroll_l_png,scroll_r_png,tsukue_frame_01_png,tsukue_frame_02_png,tsukue_frame_03_png,Z11_png,katadukeru_png,tsukue_png,clover_154_png,clover_160_png,clover_166_png,sys_clover_window_png,PropsTable_txt,shop_tenpo_ue_png,shop_kago_b_png,shop_kago_g_png,shop_kago_p_png,shop_kago_y_png,shop_tana_png,shop_setumei_png,raffle_84_88_png,goods_0_png,goods_3_png,goods_2_png,goods_5_png,goods_1_png,goods_4_png,goods_6_png,goods_16_png,goods_17_png,goods_18_png,goods_10_png,goods_11_png,goods_12_png,goods_13_png,goods_14_png,goods_15_png,goods_7_png,goods_8_png,goods_9_png,shop_tenpo_sita_png,label_04_png,button_empty_png,read_png,eat_json,eat_png,read_json,motimono_png,sentaku_png,icon_shop_84_88_png",
 			"name": "preload"
 		}
 	],
@@ -315,16 +315,6 @@
 			"name": "icon_shop_84_88_png",
 			"type": "image",
 			"url": "assets/icon_shop_84_88.png"
-		},
-		{
-			"name": "frame_01_png",
-			"type": "image",
-			"url": "assets/frame_01.png"
-		},
-		{
-			"name": "mail_yotuba_png",
-			"type": "image",
-			"url": "assets/mail_yotuba.png"
 		}
 	]
 }
