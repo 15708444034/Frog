@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BackpackTableSkin" width="640" height="1366" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="1616586942d" ></w:Config>
+	<e:Image id="image0" source="frame_tsukue_png" x="120" y="366.2" anchorOffsetY="0" height="132" scaleX="0.8" scaleY="0.8"/>
+	<e:Image id="image1" source="button_empty_png" x="129.4" y="385" anchorOffsetX="0" width="98" anchorOffsetY="0" height="90" scale9Grid="13,7,395,46" scaleX="0.8" scaleY="0.8"/>
+	<e:Image id="image2" source="goods_0_png" x="143.99" y="397" anchorOffsetX="0" width="57" anchorOffsetY="0" height="61" scaleX="0.8" scaleY="0.8"/>
+	<e:Label id="label0" text="Name" x="262.2" y="385" anchorOffsetX="0" width="229" textColor="0x000000" textAlign="center" scaleX="0.8" scaleY="0.8"/>
+	<e:Label id="label1" text="Label" x="235" y="419" anchorOffsetX="0" width="275.75" anchorOffsetY="0" height="51" textColor="0x000000" scaleX="0.8" scaleY="0.8"/>
+	<e:Label id="label2" text="2" x="186.01" y="428.73" anchorOffsetX="0" width="23.95" anchorOffsetY="0" height="31.25" textColor="0x000000" scaleX="0.8" scaleY="0.8" rotation="0.42"/>
+</e:Skin>

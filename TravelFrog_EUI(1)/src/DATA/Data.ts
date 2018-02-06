@@ -93,6 +93,8 @@ class Data {
     public static savelist() {
         for (let i: number = 0; i < this.grasslist.length; i++) {
 
+    public static ShopTable: { [key: string]: string[]; } = {};
+    public static BackpackTable:{[key:string]:number}={};
 
             var value: string = this.grasslist[i][0].toString() + "," + this.grasslist[i][1].toString() + "," + this.grasslist[i][2].toString() + "," + this.grasslist[i][3];
             egret.localStorage.setItem(i.toString(), value);

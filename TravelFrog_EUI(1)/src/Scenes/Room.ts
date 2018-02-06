@@ -35,30 +35,50 @@ class Room extends egret.Sprite {
 	{
 		if(!this.getChildByName( "Trip" ))
 		{
-			this.addChild(this.bagsSprite);
+			this.addChild(this.roomEUI);
 		}
 		else
 		{
-			this.removeChild(this.bagsSprite);
-			
+			this.removeChild(this.roomEUI);
 		}
 		
 	}
 
-	private bagsSprite:egret.Sprite;
+	private roomEUI:RoomEUI;
+	private backpack_EUI:Backpack_EUI;
 	private createBags()
 	{
-		this.bagsSprite=new egret.Sprite();
-		this.bagsSprite.name="Trip";
+		this.roomEUI = new RoomEUI();
+		this.roomEUI.name="Trip";
+		
+		this.roomEUI.buttonXL.addEventListener(egret.TouchEvent.TOUCH_END,this.TouchTrip,this);
+		this.roomEUI.buttonXR.addEventListener(egret.TouchEvent.TOUCH_END,this.TouchTrip,this);
+		this.roomEUI.button0.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
+		this.roomEUI.button1.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
+		this.roomEUI.button2.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
+		this.roomEUI.button3.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
+		this.roomEUI.button4.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
+		this.roomEUI.button5.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
+		this.roomEUI.button6.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
+		this.roomEUI.button7.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
+		this.roomEUI.button8.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
 
-		let roomEUI = new RoomEUI();
-        this.bagsSprite.addChild(roomEUI);
-		roomEUI.buttonXL.addEventListener(egret.TouchEvent.TOUCH_END,this.TouchTrip,this);
-		roomEUI.buttonXR.addEventListener(egret.TouchEvent.TOUCH_END,this.TouchTrip,this);
+		this.backpack_EUI=new Backpack_EUI();
+		this.backpack_EUI.name="Backpack";
+		this.backpack_EUI.buttonX.addEventListener(egret.TouchEvent.TOUCH_END,this.openBackpack,this);
 	}
 
-	private Finish()
+	
+	private openBackpack()
 	{
+		if(!this.getChildByName( "Backpack" ))
+		{
+			this.addChild(this.backpack_EUI);
+		}
+		else
+		{
+			this.removeChild(this.backpack_EUI);
+		}
 		
 	}
 }

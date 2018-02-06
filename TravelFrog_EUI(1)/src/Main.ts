@@ -125,8 +125,8 @@ class Main extends eui.UILayer {
      
     protected createGameScene(): void {
 
+        Data.readShopTable();
         
-	  
         this.control = new Control();
         this.addChild(this.control);
 
