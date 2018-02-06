@@ -45,5 +45,6 @@ class Frog extends egret.Sprite {
             }
         }
     }
+  
 
 }

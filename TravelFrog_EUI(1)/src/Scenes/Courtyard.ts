@@ -20,6 +20,7 @@ class Courtyard extends egret.Sprite {
 		this.background.texture = RES.getRes("haikei_niwa_png");
 		this.addChild(this.background);
 		this.background.x = Data.getscreenWidth() - this.width;
+
 		this.width = this.background.width;
 		this.background.touchEnabled = true;
 		this.background.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.move, this);
@@ -34,37 +35,23 @@ class Courtyard extends egret.Sprite {
 
 				grass.x = Data.grasslist[i][0];
 				grass.y = Data.grasslist[i][1];
-				grass.touchEnabled=true;
+				grass.touchEnabled = true;
 				this.addChild(grass);
-				grass.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
-				grass.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this)
-				grass.addEventListener(egret.Event.ENTER_FRAME, this.clear, this);
+				
+					grass.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
+					grass.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this);
+					grass.addEventListener(egret.Event.ENTER_FRAME, this.clear, this);
+
+				
 
 
 			}
 		}
 
 	}
+	 
+	
 
-	/*private clear(event: egret.Event){
-		if(event.target.y<500){
-			this.addChildAt(event.target,0);
-			event.target.removeEventListener(egret.Event.ENTER_FRAME,this.clear,this);
-			for (let i: number = 0; i <Data.grasslist.length; i++) {
-				if(event.target.x== Data.grasslist[i][0]&&event.target.y== Data.grasslist[i][1]){
-					Data.grasslist[i][2]=false;
-				}
-			}
-
-		}
-	}
-
-	private grassclear(event: egret.Event) {
-		
-		var tw = egret.Tween.get(event.target);
-		tw.to({ y: 450,"alpha":0}, 1000)
-		
-	}*/
 	private clear(event: egret.Event) {
 
 		if (event.target.y < 500 && event.target.y != 0) {
@@ -86,8 +73,8 @@ class Courtyard extends egret.Sprite {
 			}
 		}
 		Data.savelist();
-		this.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
-		this.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this);
+		event.target.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
+		event.target.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this);
 		var tw = egret.Tween.get(event.target);
 		tw.to({ y: 450, "alpha": 0 }, 1000);
 

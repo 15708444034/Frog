@@ -23,6 +23,7 @@ var Control = (function (_super) {
         else {
             Data.loadlist();
         }
+        this.store = new Shop_EUI();
         this.room = new Room();
         this.courtyard = new Courtyard();
         this.addChild(this.courtyard);
@@ -45,6 +46,8 @@ var Control = (function (_super) {
         this.addChild(this.shop);
         this.shop.x = this.Courtyardicon.x;
         this.shop.y = this.Courtyardicon.y - this.Courtyardicon.height - 10;
+        this.shop.touchEnabled = true;
+        this.shop.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.loadshop, this);
         this.clover = new egret.Bitmap();
         this.clover.texture = RES.getRes("sys_clover_window_png");
         this.addChild(this.clover);
@@ -66,11 +69,18 @@ var Control = (function (_super) {
     Control.prototype.loadRoom = function () {
         this.addChildAt(this.homeicon, 0);
         this.addChild(this.room);
+        this.Courtyardicon.y = Data.getscreenHeight() - this.Courtyardicon.height - 10;
         this.addChild(this.Courtyardicon);
         this.addChild(this.shop);
         this.addChild(this.clover);
         this.addChild(this.clovertext);
         this.addChild(this.reset);
+    };
+    Control.prototype.loadshop = function () {
+        this.addChild(this.store);
+        this.addChild(this.homeicon);
+        this.Courtyardicon.y = this.shop.y;
+        this.addChild(this.Courtyardicon);
     };
     Control.prototype.numberchange = function () {
         if (egret.localStorage.getItem(Data.key) == null) {

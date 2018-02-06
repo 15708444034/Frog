@@ -39,25 +39,6 @@ var Courtyard = (function (_super) {
             }
         }
     };
-    /*private clear(event: egret.Event){
-        if(event.target.y<500){
-            this.addChildAt(event.target,0);
-            event.target.removeEventListener(egret.Event.ENTER_FRAME,this.clear,this);
-            for (let i: number = 0; i <Data.grasslist.length; i++) {
-                if(event.target.x== Data.grasslist[i][0]&&event.target.y== Data.grasslist[i][1]){
-                    Data.grasslist[i][2]=false;
-                }
-            }
-
-        }
-    }
-
-    private grassclear(event: egret.Event) {
-        
-        var tw = egret.Tween.get(event.target);
-        tw.to({ y: 450,"alpha":0}, 1000)
-        
-    }*/
     Courtyard.prototype.clear = function (event) {
         if (event.target.y < 500 && event.target.y != 0) {
             this.removeChild(event.target);
@@ -73,8 +54,8 @@ var Courtyard = (function (_super) {
             }
         }
         Data.savelist();
-        this.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
-        this.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this);
+        event.target.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
+        event.target.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this);
         var tw = egret.Tween.get(event.target);
         tw.to({ y: 450, "alpha": 0 }, 1000);
     };

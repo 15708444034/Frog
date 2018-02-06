@@ -50,13 +50,15 @@ class Shop_EUI extends eui.Component implements eui.UIComponent {
 	}
 
 	private moveR() {
+		
 		if (this.Groups.x>-(this.Groups.numChildren/4*Data.getscreenWidth())+Data.getscreenWidth()) {
 			let tw = egret.Tween.get(this.Groups);
-			tw.to({ x: this.Groups.x - Data.getscreenWidth() }, 500);
+		tw.to({ x: this.Groups.x - Data.getscreenWidth() }, 500);
 		}
 	}
 
 	private moveL() {
+		
 		if (this.Groups.x<0){
 			let tw = egret.Tween.get(this.Groups);
 			tw.to({ x: this.Groups.x + Data.getscreenWidth() }, 500);

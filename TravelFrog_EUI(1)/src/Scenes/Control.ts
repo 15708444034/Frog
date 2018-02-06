@@ -14,6 +14,7 @@ class Control extends egret.Sprite {
 	private room: Room;
 	private shop: egret.Bitmap;
 	private frogread: egret.Bitmap;
+	private store:Shop_EUI;
 
 	/*重置按钮*/
 	private reset:egret.Bitmap;
@@ -24,7 +25,7 @@ class Control extends egret.Sprite {
 		}else{
 			Data.loadlist();
 		}
-		
+		this.store=new Shop_EUI();
 		this.room = new Room();
 
 		this.courtyard = new Courtyard();
@@ -51,6 +52,8 @@ class Control extends egret.Sprite {
 		this.addChild(this.shop);
 		this.shop.x = this.Courtyardicon.x;
 		this.shop.y = this.Courtyardicon.y - this.Courtyardicon.height - 10;
+		this.shop.touchEnabled=true;
+		this.shop.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.loadshop, this);
 
 		this.clover = new egret.Bitmap();
 		this.clover.texture = RES.getRes("sys_clover_window_png");
@@ -80,12 +83,19 @@ class Control extends egret.Sprite {
 
 
 		this.addChild(this.room);
+		this.Courtyardicon.y = Data.getscreenHeight() - this.Courtyardicon.height - 10;
 		this.addChild(this.Courtyardicon);
 		this.addChild(this.shop);
 		this.addChild(this.clover);
 		this.addChild(this.clovertext);
 		this.addChild(this.reset);
 
+	}
+	private loadshop(){
+		this.addChild(this.store);s
+		this.addChild(this.homeicon);
+		this.Courtyardicon.y=this.shop.y;
+		this.addChild(this.Courtyardicon);
 	}
 	private numberchange() {
 
