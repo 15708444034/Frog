@@ -82,8 +82,11 @@ var Data = (function () {
         var temp = 0;
         for (var i = 1; i < strArray2.length; i++) {
             this.ShopTable[strArray2[i][0]] = strArray2[i];
+            this.BackpackTable[strArray2[i][0]] = 0;
         }
-        //this.groups=new egret.Sprite();
+    };
+    Data.Buy = function (id) {
+        this.BackpackTable[id] += 1;
     };
     Data.save = function () {
         var value = this.clovernumber.toString();
@@ -116,12 +119,7 @@ var Data = (function () {
         [-234, 680, 1, ""],
         [-80, 680, 1, ""]];
     Data.ShopTable = {};
-    Data.BackpackTable = {
-        "Bento": {},
-        "Prop": {},
-        "LuckyCharm": {},
-        "Specialty": {},
-    };
+    Data.BackpackTable = {};
     return Data;
 }());
 __reflect(Data.prototype, "Data");

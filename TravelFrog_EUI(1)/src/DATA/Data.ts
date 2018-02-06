@@ -85,16 +85,15 @@ class Data {
         }
 
     }
-    public static reset(){
+    public static reset() {
         egret.localStorage.clear();
-        var value:string="yes";
-        egret.localStorage.setItem(this.isfirst,value);
+        var value: string = "yes";
+        egret.localStorage.setItem(this.isfirst, value);
     }
     public static savelist() {
         for (let i: number = 0; i < this.grasslist.length; i++) {
 
-    public static ShopTable: { [key: string]: string[]; } = {};
-    public static BackpackTable:{[key:string]:number}={};
+
 
             var value: string = this.grasslist[i][0].toString() + "," + this.grasslist[i][1].toString() + "," + this.grasslist[i][2].toString() + "," + this.grasslist[i][3];
             egret.localStorage.setItem(i.toString(), value);
@@ -111,8 +110,8 @@ class Data {
             this.grasslist[i][3] = strArray[3];
         }
     }
-
-    public static ShopTable: { [key: number]: string[]; } = {};
+    public static ShopTable: { [key: string]: string[]; } = {};
+    public static BackpackTable: { [key: string]: number } = {};
 
     public static readShopTable() {
 
@@ -125,23 +124,19 @@ class Data {
         let temp: number = 0;
         for (let i = 1; i < strArray2.length; i++) {
             this.ShopTable[strArray2[i][0]] = strArray2[i];
-        }
 
-        //this.groups=new egret.Sprite();
+            this.BackpackTable[strArray2[i][0]] = 0;
+        }
     }
 
-    public static BackpackTable: { [key: string]: { [key: string]: number }; } = {
-        "Bento": {},
-        "Prop": {},
-        "LuckyCharm": {},
-        "Specialty": {},
-    };
+    public static Buy(id: string) {
+        this.BackpackTable[id] += 1;
+    }
 
     public static save() {
 
         var value: string = this.clovernumber.toString();
         egret.localStorage.setItem(this.key, value);
     }
-    //public static groups:egret.Sprite;
 
 }
