@@ -20,14 +20,10 @@
 		"RoomEUI": "resource/eui_skins/RoomEUI.exml",
 		"ShopEUI": "resource/eui_skins/ShopEUI.exml",
 		"Shop_EUI": "resource/eui_skins/Shop_EUI.exml",
-		"Basket_EUI": "resource/eui_skins/Basket_EUI.exml",
-		"Backpack_EUI": "resource/eui_skins/Backpack_EUI.exml",
-		"BackpackTable": "resource/eui_skins/BackpackTable.exml"
+		"Basket_EUI": "resource/eui_skins/Basket_EUI.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
-		"resource/eui_skins/BackpackTable.exml",
-		"resource/eui_skins/Backpack_EUI.exml",
 		"resource/eui_skins/Basket_EUI.exml",
 		"resource/eui_skins/ButtonSkin.exml",
 		"resource/eui_skins/CheckBoxSkin.exml",

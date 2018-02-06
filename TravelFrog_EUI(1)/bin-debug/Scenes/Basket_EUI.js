@@ -12,7 +12,6 @@ var Basket_EUI = (function (_super) {
     __extends(Basket_EUI, _super);
     function Basket_EUI() {
         var _this = _super.call(this) || this;
-        _this.id = "";
         _this.skinName = "Basket_EUISkin";
         return _this;
     }

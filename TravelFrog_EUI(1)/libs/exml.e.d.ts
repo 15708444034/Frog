@@ -1,7 +1,3 @@
-declare class BackpackTableSkin extends eui.Skin{
-}
-declare class Backpack_EUISkin extends eui.Skin{
-}
 declare class Basket_EUISkin extends eui.Skin{
 }
 declare module skins{

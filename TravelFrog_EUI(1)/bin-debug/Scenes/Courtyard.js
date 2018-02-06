@@ -25,31 +25,56 @@ var Courtyard = (function (_super) {
         this.background.touchEnabled = true;
         this.background.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.move, this);
         this.background.addEventListener(egret.TouchEvent.TOUCH_END, this.TouchEnd, this);
-        var temp = 0;
         for (var i = 0; i < Data.grasslist.length; i++) {
-            if (Data.grasslist[i][2]) {
-                Data.grasslist[i][3].x = Data.grasslist[i][0];
-                Data.grasslist[i][3].y = Data.grasslist[i][1];
-                this.addChild(Data.grasslist[i][3]);
-                Data.grasslist[i][3].addEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
-                Data.grasslist[i][3].addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this);
-                Data.grasslist[i][3].addEventListener(egret.Event.ENTER_FRAME, this.clear, this);
-                temp++;
+            if (Data.grasslist[i][2] == 1) {
+                var grass = new egret.Bitmap();
+                grass.texture = RES.getRes(Data.grasslist[i][3]);
+                grass.x = Data.grasslist[i][0];
+                grass.y = Data.grasslist[i][1];
+                grass.touchEnabled = true;
+                this.addChild(grass);
+                grass.addEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
+                grass.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this);
+                grass.addEventListener(egret.Event.ENTER_FRAME, this.clear, this);
             }
         }
     };
-    Courtyard.prototype.clear = function (event) {
-        if (event.target.y < 500) {
-            this.addChildAt(event.target, 0);
-            event.target.removeEventListener(egret.Event.ENTER_FRAME, this.clear, this);
-            for (var i = 0; i < Data.grasslist.length; i++) {
-                if (event.target.x == Data.grasslist[i][0] && event.target.y == Data.grasslist[i][1]) {
-                    Data.grasslist[i][2] = false;
+    /*private clear(event: egret.Event){
+        if(event.target.y<500){
+            this.addChildAt(event.target,0);
+            event.target.removeEventListener(egret.Event.ENTER_FRAME,this.clear,this);
+            for (let i: number = 0; i <Data.grasslist.length; i++) {
+                if(event.target.x== Data.grasslist[i][0]&&event.target.y== Data.grasslist[i][1]){
+                    Data.grasslist[i][2]=false;
                 }
             }
+
+        }
+    }
+
+    private grassclear(event: egret.Event) {
+        
+        var tw = egret.Tween.get(event.target);
+        tw.to({ y: 450,"alpha":0}, 1000)
+        
+    }*/
+    Courtyard.prototype.clear = function (event) {
+        if (event.target.y < 500 && event.target.y != 0) {
+            this.removeChild(event.target);
+            Data.AddClover();
+            Data.save();
+            event.target.removeEventListener(egret.Event.ENTER_FRAME, this.clear, this);
         }
     };
     Courtyard.prototype.grassclear = function (event) {
+        for (var i = 0; i < Data.grasslist.length; i++) {
+            if (event.target.x == Data.grasslist[i][0] && event.target.y == Data.grasslist[i][1]) {
+                Data.grasslist[i][2] = false;
+            }
+        }
+        Data.savelist();
+        this.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.grassclear, this);
+        this.removeEventListener(egret.TouchEvent.TOUCH_BEGIN, this.grassclear, this);
         var tw = egret.Tween.get(event.target);
         tw.to({ y: 450, "alpha": 0 }, 1000);
     };

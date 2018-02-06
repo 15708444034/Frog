@@ -1,39 +1,39 @@
 {
-  "1614a29be1b": {
-    "path": "Test.ts",
-    "class": "Test",
-    "parentPath": ""
-  },
-  "global": {
-    "globalAutoLayerMarkEnable": true
-  },
-  "1614a348139": {
-    "backgroundX": 0,
-    "backgroundY": 0,
-    "backgroundWidth": -1,
-    "backgroundHeight": -1,
-    "useBgImage": true,
-    "useBgColor": true,
-    "backgroundAlpha": 100
-  },
-  "1614a9c8a9e": {
-    "path": "11.ts",
-    "class": "11",
-    "parentPath": ""
-  },
-  "16150c67ad3": {
-    "path": "Scenes\\ShopEUI.ts",
-    "class": "ShopEUI",
-    "parentPath": ""
-  },
-  "16150e09e82": {
-    "path": "Scenes\\ShopEUI.ts",
-    "class": "ShopEUI",
-    "parentPath": ""
-  },
-  "16163c0c87c": {
-    "path": "Scenes\\Basket_EUI.ts",
-    "class": "Basket_EUI",
-    "parentPath": ""
-  }
+    "1614a29be1b": {
+        "path": "Test.ts",
+        "class": "Test",
+        "parentPath": ""
+    },
+    "global": {
+        "globalAutoLayerMarkEnable": false
+    },
+    "1614a348139": {
+        "backgroundX": 0,
+        "backgroundY": 0,
+        "backgroundWidth": -1,
+        "backgroundHeight": -1,
+        "useBgImage": true,
+        "useBgColor": true,
+        "backgroundAlpha": 100
+    },
+    "1614a9c8a9e": {
+        "path": "11.ts",
+        "class": "11",
+        "parentPath": ""
+    },
+    "16150c67ad3": {
+        "path": "Scenes\\ShopEUI.ts",
+        "class": "ShopEUI",
+        "parentPath": ""
+    },
+    "16150e09e82": {
+        "path": "Scenes\\ShopEUI.ts",
+        "class": "ShopEUI",
+        "parentPath": ""
+    },
+    "16163c0c87c": {
+        "path": "Scenes\\Basket_EUI.ts",
+        "class": "Basket_EUI",
+        "parentPath": ""
+    }
 }

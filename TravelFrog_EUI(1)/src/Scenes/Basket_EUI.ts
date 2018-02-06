@@ -16,13 +16,11 @@ class Basket_EUI extends eui.Component implements  eui.UIComponent {
 		super.childrenCreated();
 	}
 
-	public id:string="";
 	public Basket:eui.Group;
 	public Image0:eui.Image;
 	public Image1:eui.Image;
 	public Name0:eui.Label;
 	public Price0:eui.Label;
-
 
 	
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="Basket_EUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="16163c0c87c" ></w:Config>
-	<e:Group id="Basket" anchorOffsetX="0" anchorOffsetY="0" width="236" height="280" x="44" y="234">
+	<e:Group id="Basket" anchorOffsetX="0" anchorOffsetY="0" width="236" height="280" x="59" y="234">
 		<e:Image id="Image0" source="shop_kago_b_png" anchorOffsetX="0" anchorOffsetY="0" width="261" height="241" x="-12.5" y="0"/>
 		<e:Image id="Image1" source="goods_0_png" anchorOffsetX="0" anchorOffsetY="0" height="116.67" width="134.33" x="50.83" y="62.16"/>
 		<e:Image source="sys_clover_window_png" anchorOffsetX="0" anchorOffsetY="0" width="108" height="56" x="124" y="137"/>

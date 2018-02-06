@@ -25,32 +25,24 @@ class Shop_EUI extends eui.Component implements eui.UIComponent {
 	private Groups: eui.Component;
 	private GenerateGroup() {
 		this.Groups = new eui.Component();
-		var index = 0;
+		var index = 1;
 		for (let i in Data.ShopTable) {
 			let bsketgroup = new Basket_EUI();
-			bsketgroup.Image1.source = Data.ShopTable[i][2];
+			bsketgroup.Image0.source = Data.ShopTable[i][2];
 			bsketgroup.Name0.text = Data.ShopTable[i][3];
 			bsketgroup.Price0.text = Data.ShopTable[i][4];
-			bsketgroup.id=i;
-			bsketgroup.touchEnabled=true;
-			bsketgroup.addEventListener(egret.TouchEvent.TOUCH_END, this.Touch, this);
 			this.Groups.addChild(bsketgroup);
-			if(index%2==0){
-				bsketgroup.x = index * Data.getscreenWidth()/4;
-			}
-			else{
-				bsketgroup.x = (index-1) * Data.getscreenWidth()/4;
-				bsketgroup.y +=300;
-			}
+			bsketgroup.x = index * 300;
 			index++;
 		}
-		this.addChildAt(this.Groups,5);
+		//this.Groups.y=Data.getscreenHeight()/2-this.Groups.height/2;
+		this.addChild(this.Groups);
 		this.ButtonR.addEventListener(egret.TouchEvent.TOUCH_END, this.moveR, this);
 		this.ButtonL.addEventListener(egret.TouchEvent.TOUCH_END, this.moveL, this);
 	}
 
 	private moveR() {
-		if (this.Groups.x>-(this.Groups.numChildren/4*Data.getscreenWidth())+Data.getscreenWidth()) {
+		if (this.Groups.x>-this.Groups.width) {
 			let tw = egret.Tween.get(this.Groups);
 			tw.to({ x: this.Groups.x - Data.getscreenWidth() }, 500);
 		}
@@ -60,18 +52,6 @@ class Shop_EUI extends eui.Component implements eui.UIComponent {
 		if (this.Groups.x<0){
 			let tw = egret.Tween.get(this.Groups);
 			tw.to({ x: this.Groups.x + Data.getscreenWidth() }, 500);
-		}
-	}
-	private TouchId:string=null;
-	private Touch(e: egret.Event)
-	{
-		if(this.TouchId!=e.currentTarget.id||this.TouchId==null){
-			this.TouchId=e.currentTarget.id;
-			this.Txt.text= Data.ShopTable[e.currentTarget.id][6];
-		}
-		else
-		{
-			Data.Buy(e.currentTarget.id);
 		}
 	}
 
