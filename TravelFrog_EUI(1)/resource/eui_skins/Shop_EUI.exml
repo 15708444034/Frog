@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Shop_EUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="1615513e757" ></w:Config>
+	<e:Image source="label_04_png" anchorOffsetX="298.33" anchorOffsetY="466.97" scale9Grid="48,15,693,90" left="0" right="0" top="0" bottom="0"/>
+	<e:Image source="shop_tenpo_ue_png" anchorOffsetX="240" anchorOffsetY="53" height="126" y="53" width="640" x="240"/>
+	<e:Image source="shop_tenpo_sita_png" anchorOffsetX="0" anchorOffsetY="0" height="209" left="0" right="0" bottom="0"/>
+	<e:Image source="shop_setumei_png" anchorOffsetX="3.37" anchorOffsetY="-0.62" bottom="18" width="476" height="157" left="17"/>
+	<e:Image source="shop_tana_png" anchorOffsetX="2.67" anchorOffsetY="0.98" right="0" left="0" top="230" bottom="209"/>
+	<e:Button id="ButtonR" label="" width="55" height="86" right="0" verticalCenter="0" enabled="true">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="scroll_r_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="ButtonL" label="" left="0" height="86" width="55" verticalCenter="0" enabled="true">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="scroll_l_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="ButtonS" label="" right="16" top="19" width="84" height="88">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="raffle_84_88_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Label id="Txt" text="a\na\nb\nc" anchorOffsetX="0" width="402.66" anchorOffsetY="0" height="124.67" textColor="0x000000" size="40" left="50" bottom="33"/>
+</e:Skin>

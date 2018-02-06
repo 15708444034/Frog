@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Basket_EUISkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16163c0c87c" ></w:Config>
+	<e:Group id="Basket" anchorOffsetX="0" anchorOffsetY="0" width="236" height="280" x="59" y="234">
+		<e:Image id="Image0" source="shop_kago_b_png" anchorOffsetX="0" anchorOffsetY="0" width="261" height="241" x="-12.5" y="0"/>
+		<e:Image id="Image1" source="goods_0_png" anchorOffsetX="0" anchorOffsetY="0" height="116.67" width="134.33" x="50.83" y="62.16"/>
+		<e:Image source="sys_clover_window_png" anchorOffsetX="0" anchorOffsetY="0" width="108" height="56" x="124" y="137"/>
+		<e:Image source="button_empty_png" anchorOffsetX="112.8" anchorOffsetY="32.34" scaleX="1" scaleY="1" width="216.99" height="62.33" y="250.01" x="125.31"/>
+		<e:Label id="Name0" text="繁缕三明治" x="20.33" y="234" anchorOffsetX="0" width="202" anchorOffsetY="0" height="34" textColor="0x000000" size="25" bold="true" fontFamily="SimHei" verticalAlign="middle" textAlign="center"/>
+		<e:Label id="Price0" text="1000" x="135.67" y="152" textColor="0x000000" anchorOffsetX="0" width="76.66"/>
+	</e:Group>
+</e:Skin>

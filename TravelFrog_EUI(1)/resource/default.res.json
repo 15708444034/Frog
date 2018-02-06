@@ -1,0 +1,305 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,back_mainIn_png,bg_jpg,close_png,egret_icon_png,frame_kaban_png,frame_tsukue_png,haikei_niwa_png,icon_house_84_88_png,icon_out_84_88_png,kaban_png,kanryou_png,scroll_l_png,scroll_r_png,tsukue_frame_01_png,tsukue_frame_02_png,tsukue_frame_03_png,Z11_png,katadukeru_png,tsukue_png,clover_154_png,clover_160_png,clover_166_png,sys_clover_window_png,PropsTable_txt,shop_tenpo_ue_png,shop_kago_b_png,shop_kago_g_png,shop_kago_p_png,shop_kago_y_png,shop_tana_png,shop_setumei_png,raffle_84_88_png,goods_0_png,goods_3_png,goods_2_png,goods_5_png,goods_1_png,goods_4_png,goods_6_png,goods_16_png,goods_17_png,goods_18_png,goods_10_png,goods_11_png,goods_12_png,goods_13_png,goods_14_png,goods_15_png,goods_7_png,goods_8_png,goods_9_png,shop_tenpo_sita_png,label_04_png,button_empty_png,read_png,eat_json,eat_png,read_json",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/back_mainIn.png",
+			"type": "image",
+			"name": "back_mainIn_png"
+		},
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/close.png",
+			"type": "image",
+			"name": "close_png"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "assets/frame_kaban.png",
+			"type": "image",
+			"name": "frame_kaban_png"
+		},
+		{
+			"url": "assets/frame_tsukue.png",
+			"type": "image",
+			"name": "frame_tsukue_png"
+		},
+		{
+			"url": "assets/haikei_niwa.png",
+			"type": "image",
+			"name": "haikei_niwa_png"
+		},
+		{
+			"url": "assets/icon_house_84_88.png",
+			"type": "image",
+			"name": "icon_house_84_88_png"
+		},
+		{
+			"url": "assets/icon_out_84_88.png",
+			"type": "image",
+			"name": "icon_out_84_88_png"
+		},
+		{
+			"url": "assets/kaban.png",
+			"type": "image",
+			"name": "kaban_png"
+		},
+		{
+			"url": "assets/kanryou.png",
+			"type": "image",
+			"name": "kanryou_png"
+		},
+		{
+			"url": "assets/scroll_l.png",
+			"type": "image",
+			"name": "scroll_l_png"
+		},
+		{
+			"url": "assets/scroll_r.png",
+			"type": "image",
+			"name": "scroll_r_png"
+		},
+		{
+			"url": "assets/tsukue_frame_01.png",
+			"type": "image",
+			"name": "tsukue_frame_01_png"
+		},
+		{
+			"url": "assets/tsukue_frame_02.png",
+			"type": "image",
+			"name": "tsukue_frame_02_png"
+		},
+		{
+			"url": "assets/tsukue_frame_03.png",
+			"type": "image",
+			"name": "tsukue_frame_03_png"
+		},
+		{
+			"url": "assets/Z11.png",
+			"type": "image",
+			"name": "Z11_png"
+		},
+		{
+			"url": "assets/katadukeru.png",
+			"type": "image",
+			"name": "katadukeru_png"
+		},
+		{
+			"url": "assets/tsukue.png",
+			"type": "image",
+			"name": "tsukue_png"
+		},
+		{
+			"url": "assets/clover_154.png",
+			"type": "image",
+			"name": "clover_154_png"
+		},
+		{
+			"url": "assets/clover_160.png",
+			"type": "image",
+			"name": "clover_160_png"
+		},
+		{
+			"url": "assets/clover_166.png",
+			"type": "image",
+			"name": "clover_166_png"
+		},
+		{
+			"url": "assets/sys_clover_window.png",
+			"type": "image",
+			"name": "sys_clover_window_png"
+		},
+		{
+			"url": "PropsTable/PropsTable.txt",
+			"type": "text",
+			"name": "PropsTable_txt"
+		},
+		{
+			"url": "assets/shop_tenpo_ue.png",
+			"type": "image",
+			"name": "shop_tenpo_ue_png"
+		},
+		{
+			"url": "assets/shop_kago_b.png",
+			"type": "image",
+			"name": "shop_kago_b_png"
+		},
+		{
+			"url": "assets/shop_kago_g.png",
+			"type": "image",
+			"name": "shop_kago_g_png"
+		},
+		{
+			"url": "assets/shop_kago_p.png",
+			"type": "image",
+			"name": "shop_kago_p_png"
+		},
+		{
+			"url": "assets/shop_kago_y.png",
+			"type": "image",
+			"name": "shop_kago_y_png"
+		},
+		{
+			"url": "assets/shop_tana.png",
+			"type": "image",
+			"name": "shop_tana_png"
+		},
+		{
+			"url": "assets/shop_setumei.png",
+			"type": "image",
+			"name": "shop_setumei_png"
+		},
+		{
+			"url": "assets/raffle_84_88.png",
+			"type": "image",
+			"name": "raffle_84_88_png"
+		},
+		{
+			"url": "assets/goods_0.png",
+			"type": "image",
+			"name": "goods_0_png"
+		},
+		{
+			"url": "assets/goods_3.png",
+			"type": "image",
+			"name": "goods_3_png"
+		},
+		{
+			"url": "assets/goods_2.png",
+			"type": "image",
+			"name": "goods_2_png"
+		},
+		{
+			"url": "assets/goods_5.png",
+			"type": "image",
+			"name": "goods_5_png"
+		},
+		{
+			"url": "assets/goods_1.png",
+			"type": "image",
+			"name": "goods_1_png"
+		},
+		{
+			"url": "assets/goods_4.png",
+			"type": "image",
+			"name": "goods_4_png"
+		},
+		{
+			"url": "assets/goods_6.png",
+			"type": "image",
+			"name": "goods_6_png"
+		},
+		{
+			"url": "assets/goods_16.png",
+			"type": "image",
+			"name": "goods_16_png"
+		},
+		{
+			"url": "assets/goods_17.png",
+			"type": "image",
+			"name": "goods_17_png"
+		},
+		{
+			"url": "assets/goods_18.png",
+			"type": "image",
+			"name": "goods_18_png"
+		},
+		{
+			"url": "assets/goods_10.png",
+			"type": "image",
+			"name": "goods_10_png"
+		},
+		{
+			"url": "assets/goods_11.png",
+			"type": "image",
+			"name": "goods_11_png"
+		},
+		{
+			"url": "assets/goods_12.png",
+			"type": "image",
+			"name": "goods_12_png"
+		},
+		{
+			"url": "assets/goods_13.png",
+			"type": "image",
+			"name": "goods_13_png"
+		},
+		{
+			"url": "assets/goods_14.png",
+			"type": "image",
+			"name": "goods_14_png"
+		},
+		{
+			"url": "assets/goods_15.png",
+			"type": "image",
+			"name": "goods_15_png"
+		},
+		{
+			"url": "assets/goods_7.png",
+			"type": "image",
+			"name": "goods_7_png"
+		},
+		{
+			"url": "assets/goods_8.png",
+			"type": "image",
+			"name": "goods_8_png"
+		},
+		{
+			"url": "assets/goods_9.png",
+			"type": "image",
+			"name": "goods_9_png"
+		},
+		{
+			"url": "assets/shop_tenpo_sita.png",
+			"type": "image",
+			"name": "shop_tenpo_sita_png"
+		},
+		{
+			"name": "label_04_png",
+			"type": "image",
+			"url": "assets/label_04.png"
+		},
+		{
+			"name": "button_empty_png",
+			"type": "image",
+			"url": "assets/button_empty.png"
+		},
+		{
+			"name": "read_png",
+			"type": "image",
+			"url": "assets/read.png"
+		},
+		{
+			"name": "eat_json",
+			"type": "json",
+			"url": "assets/eat.json"
+		},
+		{
+			"name": "eat_png",
+			"type": "image",
+			"url": "assets/eat.png"
+		},
+		{
+			"name": "read_json",
+			"type": "json",
+			"url": "assets/read.json"
+		}
+	]
+}
