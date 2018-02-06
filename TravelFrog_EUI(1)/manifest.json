@@ -9,14 +9,14 @@
 		"libs/modules/promise/promise.js"
 	],
 	"game": [
+		"bin-debug/Scenes/Backpack_EUI.js",
 		"bin-debug/AssetAdapter.js",
-		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/Character/frog.js",
 		"bin-debug/DATA/Data.js",
-		"bin-debug/Scenes/Backpack_EUI.js",
+		"bin-debug/LoadingUI.js",
 		"bin-debug/Scenes/BackpackTable.js",
 		"bin-debug/Scenes/Basket_EUI.js",
 		"bin-debug/Scenes/Control.js",

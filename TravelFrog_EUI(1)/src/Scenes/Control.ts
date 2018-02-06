@@ -92,7 +92,7 @@ class Control extends egret.Sprite {
 
 	}
 	private loadshop(){
-		this.addChild(this.store);s
+		this.addChild(this.store);
 		this.addChild(this.homeicon);
 		this.Courtyardicon.y=this.shop.y;
 		this.addChild(this.Courtyardicon);
