@@ -20,7 +20,8 @@
 		"RoomEUI": "resource/eui_skins/RoomEUI.exml",
 		"ShopEUI": "resource/eui_skins/ShopEUI.exml",
 		"Shop_EUI": "resource/eui_skins/Shop_EUI.exml",
-		"Basket_EUI": "resource/eui_skins/Basket_EUI.exml"
+		"Basket_EUI": "resource/eui_skins/Basket_EUI.exml",
+		"Photo_EUI": "resource/eui_skins/Photo_EUI.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
@@ -33,6 +34,7 @@
 		"resource/eui_skins/HSliderSkin.exml",
 		"resource/eui_skins/ItemRendererSkin.exml",
 		"resource/eui_skins/PanelSkin.exml",
+		"resource/eui_skins/Photo_EUI.exml",
 		"resource/eui_skins/ProgressBarSkin.exml",
 		"resource/eui_skins/RadioButtonSkin.exml",
 		"resource/eui_skins/RoomEUI.exml",

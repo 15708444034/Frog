@@ -67,6 +67,7 @@ class Data {
     }
     public static AddClover() {
 
+
         this.clovernumber = parseInt(egret.localStorage.getItem(this.key));
         this.clovernumber++;
         this.save();
@@ -148,6 +149,7 @@ class Data {
                  this.BackpackTable[strArray2[i][0]]= parseInt(egret.localStorage.getItem(strArray2[i][0]));
             }
 
+            this.BackpackTable[strArray2[i][0]] = 0;
         }
     }
     public static initbackpack() {
@@ -202,6 +204,19 @@ class Data {
         var value: string = timestamp3.toString();
         egret.localStorage.setItem(str, value);
     }
+
+    public static Photo:{[key: string]: number }={
+        "meisyo_01_png":1,
+        "meisyo_02_png":1,
+        "meisyo_03_png":1,
+        "meisyo_04_png":1,
+        "meisyo_05_png":1,
+        "meisyo_06_png":1,
+        "meisyo_07_png":1,
+        "meisyo_08_png":1,
+        "meisyo_09_png":1,
+        "meisyo_10_png":1
+    };
 
     public static savestate() {
 

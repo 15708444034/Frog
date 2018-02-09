@@ -28,6 +28,8 @@ declare module skins{
 	class PanelSkin extends eui.Skin{
 	}
 }
+declare class Photo_EUISkin extends eui.Skin{
+}
 declare module skins{
 	class ProgressBarSkin extends eui.Skin{
 	}

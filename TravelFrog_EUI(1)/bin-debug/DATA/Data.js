@@ -107,6 +107,7 @@ var Data = (function () {
             else {
                 this.BackpackTable[strArray2[i][0]] = parseInt(egret.localStorage.getItem(strArray2[i][0]));
             }
+            this.BackpackTable[strArray2[i][0]] = 0;
         }
     };
     Data.initbackpack = function () {
@@ -197,6 +198,18 @@ var Data = (function () {
         [-80, 680, 1, ""]];
     Data.ShopTable = {};
     Data.BackpackTable = {};
+    Data.Photo = {
+        "meisyo_01_png": 1,
+        "meisyo_02_png": 1,
+        "meisyo_03_png": 1,
+        "meisyo_04_png": 1,
+        "meisyo_05_png": 1,
+        "meisyo_06_png": 1,
+        "meisyo_07_png": 1,
+        "meisyo_08_png": 1,
+        "meisyo_09_png": 1,
+        "meisyo_10_png": 1
+    };
     return Data;
 }());
 __reflect(Data.prototype, "Data");

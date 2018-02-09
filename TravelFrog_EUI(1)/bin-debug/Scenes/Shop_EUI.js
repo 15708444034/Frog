@@ -12,6 +12,7 @@ var Shop_EUI = (function (_super) {
     __extends(Shop_EUI, _super);
     function Shop_EUI() {
         var _this = _super.call(this) || this;
+        _this._x = 0;
         _this.TouchId = null;
         _this.skinName = "Shop_EUISkin";
         _this.width = Data.getscreenWidth();
@@ -51,15 +52,17 @@ var Shop_EUI = (function (_super) {
         this.ButtonL.addEventListener(egret.TouchEvent.TOUCH_END, this.moveL, this);
     };
     Shop_EUI.prototype.moveR = function () {
-        if (this.Groups.x > -(this.Groups.numChildren / 4 * Data.getscreenWidth()) + Data.getscreenWidth()) {
+        if (this._x > -(this.Groups.numChildren / 4 * Data.getscreenWidth()) + Data.getscreenWidth()) {
             var tw = egret.Tween.get(this.Groups);
-            tw.to({ x: this.Groups.x - Data.getscreenWidth() }, 500);
+            tw.to({ x: this._x - Data.getscreenWidth() }, 500);
+            this._x -= Data.getscreenWidth();
         }
     };
     Shop_EUI.prototype.moveL = function () {
-        if (this.Groups.x < 0) {
+        if (this._x < 0) {
             var tw = egret.Tween.get(this.Groups);
-            tw.to({ x: this.Groups.x + Data.getscreenWidth() }, 500);
+            tw.to({ x: this._x + Data.getscreenWidth() }, 500).call(function () { });
+            this._x += Data.getscreenWidth();
         }
     };
     Shop_EUI.prototype.Touch = function (e) {
