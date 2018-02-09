@@ -64,8 +64,5 @@ class RoomEUI extends eui.Component implements eui.UIComponent {
 			let tw = egret.Tween.get(this);
 			tw.to({ x: this.x + this.width / 2 }, 500);
 		}
-
 	}
-
-
 }

@@ -18,8 +18,8 @@ var Frog = (function (_super) {
     }
     Frog.prototype.initState = function () {
         var temp;
-        var ran = Math.random();
-        if (ran < 0.5) {
+        var random = Math.random();
+        if (random < 0.5) {
             temp = 1;
         }
         else {

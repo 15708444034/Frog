@@ -21,6 +21,7 @@ var Room = (function (_super) {
     }
     Room.prototype.CreateScene = function () {
         this.background = new egret.Bitmap();
+        this.background.touchEnabled = true;
         this.background.texture = RES.getRes("back_mainIn_png");
         this.addChild(this.background);
         this.background.width = Data.getscreenWidth();
@@ -49,20 +50,32 @@ var Room = (function (_super) {
         this.roomEUI.buttonXL.addEventListener(egret.TouchEvent.TOUCH_END, this.TouchTrip, this);
         this.roomEUI.buttonXR.addEventListener(egret.TouchEvent.TOUCH_END, this.TouchTrip, this);
         this.roomEUI.image.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
-        this.roomEUI.image0.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
-        this.roomEUI.image1.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
         this.roomEUI.image2.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
         this.roomEUI.image3.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
-        this.roomEUI.image4.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
-        this.roomEUI.image5.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
-        this.roomEUI.image6.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
-        this.roomEUI.image7.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
+        this.roomEUI.image0.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack1, this);
+        this.roomEUI.image4.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack1, this);
+        this.roomEUI.image5.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack1, this);
+        this.roomEUI.image1.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack2, this);
+        this.roomEUI.image6.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack2, this);
+        this.roomEUI.image7.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack2, this);
         this.backpack_EUI = new Backpack_EUI();
         this.backpack_EUI.name = "Backpack";
         this.backpack_EUI.buttonX.addEventListener(egret.TouchEvent.TOUCH_END, this.openBackpack, this);
     };
     Room.prototype.openBackpack = function (e) {
         if (!this.getChildByName("Backpack")) {
+            var str = RES.getRes("PropsTable_txt");
+            var strArray = str.split("\n");
+            var strArray2 = [];
+            for (var i = 0; i < strArray.length; i++) {
+                strArray2[i] = strArray[i].split(",");
+            }
+            var temp = 0;
+            for (var i = 1; i < strArray2.length; i++) {
+                if (strArray2[i][1] != "Bento") {
+                    Data.BackpackTable[strArray2[i][0]] = 0;
+                }
+            }
             this.addChild(this.backpack_EUI);
             this.addChild(this.backpackGrops);
             this.temp = e.currentTarget;
@@ -70,6 +83,57 @@ var Room = (function (_super) {
         else {
             this.removeChild(this.backpack_EUI);
             this.removeChild(this.backpackGrops);
+            Data.readShopTable();
+            this.temp = null;
+        }
+    };
+    Room.prototype.openBackpack1 = function (e) {
+        if (!this.getChildByName("Backpack")) {
+            var str = RES.getRes("PropsTable_txt");
+            var strArray = str.split("\n");
+            var strArray2 = [];
+            for (var i = 0; i < strArray.length; i++) {
+                strArray2[i] = strArray[i].split(",");
+            }
+            var temp = 0;
+            for (var i = 1; i < strArray2.length; i++) {
+                if (strArray2[i][1] != "Prop") {
+                    Data.BackpackTable[strArray2[i][0]] = 0;
+                }
+            }
+            this.addChild(this.backpack_EUI);
+            this.addChild(this.backpackGrops);
+            this.temp = e.currentTarget;
+        }
+        else {
+            this.removeChild(this.backpack_EUI);
+            this.removeChild(this.backpackGrops);
+            Data.readShopTable();
+            this.temp = null;
+        }
+    };
+    Room.prototype.openBackpack2 = function (e) {
+        if (!this.getChildByName("Backpack")) {
+            var str = RES.getRes("PropsTable_txt");
+            var strArray = str.split("\n");
+            var strArray2 = [];
+            for (var i = 0; i < strArray.length; i++) {
+                strArray2[i] = strArray[i].split(",");
+            }
+            var temp = 0;
+            for (var i = 1; i < strArray2.length; i++) {
+                if (strArray2[i][1] != "LuckyCharm") {
+                    Data.BackpackTable[strArray2[i][0]] = 0;
+                }
+            }
+            this.addChild(this.backpack_EUI);
+            this.addChild(this.backpackGrops);
+            this.temp = e.currentTarget;
+        }
+        else {
+            this.removeChild(this.backpack_EUI);
+            this.removeChild(this.backpackGrops);
+            //Data.readShopTable();
             this.temp = null;
         }
     };
@@ -99,7 +163,15 @@ var Room = (function (_super) {
     };
     Room.prototype.equip = function (e) {
         this.temp.source = Data.ShopTable[e.currentTarget.id][2];
+        if (this.temporaryKey == null) {
+            this.temporaryKey = e.currentTarget.id;
+        }
+        else {
+            Data.BackpackTable[this.temporaryKey] += 1;
+            this.temporaryKey = e.currentTarget.id;
+        }
         Data.BackpackTable[e.currentTarget.id] -= 1;
+        Data.savebackpack();
         this.openBackpack(e);
     };
     return Room;

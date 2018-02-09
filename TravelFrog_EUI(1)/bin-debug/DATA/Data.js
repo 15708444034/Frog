@@ -11,7 +11,20 @@ var Data = (function () {
         return Data._screenWidth;
     };
     Data.getfrogstate = function () {
-        return this.frogstate;
+        var myfrogstate;
+        if (egret.localStorage.getItem(this.state) == null) {
+            this.savestate();
+            myfrogstate = this.frogstate;
+        }
+        else {
+            if (egret.localStorage.getItem(this.state) == "true") {
+                myfrogstate = true;
+            }
+            else {
+                myfrogstate = false;
+            }
+        }
+        return myfrogstate;
     };
     Data.Clovernumber = function () {
         return this.clovernumber.toString();
@@ -88,29 +101,76 @@ var Data = (function () {
         var temp = 0;
         for (var i = 1; i < strArray2.length; i++) {
             this.ShopTable[strArray2[i][0]] = strArray2[i];
-            this.BackpackTable[strArray2[i][0]] = 0;
+            if (egret.localStorage.getItem(strArray2[i][0]) == null) {
+                this.initbackpack();
+            }
+            else {
+                this.BackpackTable[strArray2[i][0]] = parseInt(egret.localStorage.getItem(strArray2[i][0]));
+            }
+        }
+    };
+    Data.initbackpack = function () {
+        var str = RES.getRes("PropsTable_txt");
+        var strArray = str.split("\n");
+        var strArray2 = [];
+        for (var i = 0; i < strArray.length; i++) {
+            strArray2[i] = strArray[i].split(",");
+        }
+        var temp = 0;
+        for (var i = 1; i < strArray2.length; i++) {
+            var value = "0";
+            egret.localStorage.setItem(strArray2[i][0], value);
+        }
+    };
+    Data.savebackpack = function () {
+        var str = RES.getRes("PropsTable_txt");
+        var strArray = str.split("\n");
+        var strArray2 = [];
+        for (var i = 0; i < strArray.length; i++) {
+            strArray2[i] = strArray[i].split(",");
+        }
+        var temp = 0;
+        for (var i = 1; i < strArray2.length; i++) {
+            var value = this.BackpackTable[strArray2[i][0]].toString();
+            egret.localStorage.setItem(strArray2[i][0], value);
         }
     };
     Data.Buy = function (id) {
         this.BackpackTable[id] += 1;
+        this.savebackpack();
     };
     Data.save = function () {
         var value = this.clovernumber.toString();
         egret.localStorage.setItem(this.key, value);
     };
-    Data.loadgrasstime = function () {
-        var timestr = egret.localStorage.getItem(this.grasstime);
+    Data.loadtime = function (str) {
+        var timestr = egret.localStorage.getItem(str);
         var time = parseInt(timestr);
         return time;
     };
-    Data.savegrasstime = function () {
+    Data.savetime = function (str) {
         var timestamp3 = new Date().getTime();
         var value = timestamp3.toString();
-        egret.localStorage.setItem(this.grasstime, value);
+        egret.localStorage.setItem(str, value);
+    };
+    Data.savestate = function () {
+        var myfrogstate = this.frogstate;
+        var value = myfrogstate.toString();
+        egret.localStorage.setItem(this.state, value);
+    };
+    Data.changestate = function () {
+        if (this.frogstate == true) {
+            this.frogstate = false;
+        }
+        else {
+            this.frogstate = true;
+        }
     };
     Data.grasstime = "grasstime";
     Data.key = "clovernumber";
     Data.isfirst = "isfirst";
+    Data.gametime = "gametime";
+    Data.state = "state";
     Data._screenWidth = 0;
     Data._screenHeight = 0;
     Data.clovernumber = 500;

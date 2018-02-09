@@ -99,6 +99,7 @@ class Courtyard extends egret.Sprite {
 	}
 
 	private TouchEnd() {
+		
 		this.initialPoin = 0;
 	}
 }

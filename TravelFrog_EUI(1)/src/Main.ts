@@ -74,64 +74,16 @@ class Main extends eui.UILayer {
         result.texture = texture;
         return result;
     }
-    /**
-     * 描述文件加载成功，开始播放动画
-     * Description file loading is successful, start to play the animation
-     */
-    /*private startAnimation(result: Array<any>): void {
-        let parser = new egret.HtmlTextParser();
-
-        let textflowArr = result.map(text => parser.parse(text));
-        let textfield = this.textfield;
-        let count = -1;
-        let change = () => {
-            count++;
-            if (count >= textflowArr.length) {
-                count = 0;
-            }
-            let textFlow = textflowArr[count];
-
-            // 切换描述内容
-            // Switch to described content
-            textfield.textFlow = textFlow;
-            let tw = egret.Tween.get(textfield);
-            tw.to({ "alpha": 1 }, 200);
-            tw.wait(2000);
-            tw.to({ "alpha": 0 }, 200);
-            tw.call(change, this);
-        };
-
-        change();
-    }*/
-
-    /**
-     * 点击按钮
-     * Click the button
-     */
-    
-    /*private onButtonClick(e: egret.TouchEvent) {
-        let panel = new eui.Panel();
-        panel.title = "Title";
-        panel.horizontalCenter = 0;
-        panel.verticalCenter = 0;
-        this.addChild(panel);
-    }*/
-
-    /**
-     * 创建场景界面
-     * Create scene interface
-     */
+  
 	private control:Control;
      
     protected createGameScene(): void {
 
-        Data.readShopTable();
-        
+       
+
         this.control = new Control();
         this.addChild(this.control);
- 
-       
-      
+         
     }
    
 }

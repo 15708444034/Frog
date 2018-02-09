@@ -147,7 +147,6 @@ var Main = (function (_super) {
         return result;
     };
     Main.prototype.createGameScene = function () {
-        Data.readShopTable();
         this.control = new Control();
         this.addChild(this.control);
     };

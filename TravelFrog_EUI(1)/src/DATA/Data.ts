@@ -1,7 +1,9 @@
 class Data {
-    public static grasstime:string="grasstime";
+    public static grasstime: string = "grasstime";
     public static key: string = "clovernumber";
     public static isfirst: string = "isfirst";
+    public static gametime: string = "gametime";
+    public static state: string = "state";
     private static _screenWidth: number = 0;
     private static _screenHeight: number = 0;
     private static clovernumber: number = 500;
@@ -35,7 +37,19 @@ class Data {
     }
 
     public static getfrogstate(): boolean {
-        return this.frogstate;
+        let myfrogstate: boolean;
+        if (egret.localStorage.getItem(this.state) == null) {
+            this.savestate();
+            myfrogstate = this.frogstate;
+        } else {
+            if (egret.localStorage.getItem(this.state) == "true") {
+                myfrogstate = true;
+            } else {
+                myfrogstate = false;
+            }
+
+        }
+        return myfrogstate;
     }
 
 
@@ -46,14 +60,12 @@ class Data {
         return this.clovernumber.toString();
     }
 
-    public static subClover(num:string)
-    {
+    public static subClover(num: string) {
         this.clovernumber = parseInt(egret.localStorage.getItem(this.key));
-        this.clovernumber-=parseInt(num);
+        this.clovernumber -= parseInt(num);
         this.save();
     }
     public static AddClover() {
-
 
         this.clovernumber = parseInt(egret.localStorage.getItem(this.key));
         this.clovernumber++;
@@ -72,7 +84,7 @@ class Data {
         var temp: number = 0;
         for (let i: number = 0; i < this.grasslist.length; i++) {
             var x = Math.random();
-            this.grasslist[i][2]=1;
+            this.grasslist[i][2] = 1;
             let str: string;
             if (x < 0.1) {
                 this.grasslist[i][3] = "clover_166_png";
@@ -100,9 +112,6 @@ class Data {
     }
     public static savelist() {
         for (let i: number = 0; i < this.grasslist.length; i++) {
-
-
-
             var value: string = this.grasslist[i][0].toString() + "," + this.grasslist[i][1].toString() + "," + this.grasslist[i][2].toString() + "," + this.grasslist[i][3];
             egret.localStorage.setItem(i.toString(), value);
 
@@ -132,13 +141,50 @@ class Data {
         let temp: number = 0;
         for (let i = 1; i < strArray2.length; i++) {
             this.ShopTable[strArray2[i][0]] = strArray2[i];
+            if (egret.localStorage.getItem(strArray2[i][0]) == null) {
+               
+                this.initbackpack();
+            }else{
+                 this.BackpackTable[strArray2[i][0]]= parseInt(egret.localStorage.getItem(strArray2[i][0]));
+            }
 
-            this.BackpackTable[strArray2[i][0]] = 0;
+        }
+    }
+    public static initbackpack() {
+         let str: string = RES.getRes("PropsTable_txt");
+        let strArray: string[] = str.split("\n");
+        let strArray2: string[][] = [];
+        for (let i = 0; i < strArray.length; i++) {
+            strArray2[i] = strArray[i].split(",");
+        }
+        let temp: number = 0;
+        for (let i = 1; i < strArray2.length; i++) {
+            let value: string = "0";
+
+            egret.localStorage.setItem(strArray2[i][0], value);
+
+        }
+        
+    }
+    public static savebackpack() {
+        let str: string = RES.getRes("PropsTable_txt");
+        let strArray: string[] = str.split("\n");
+        let strArray2: string[][] = [];
+        for (let i = 0; i < strArray.length; i++) {
+            strArray2[i] = strArray[i].split(",");
+        }
+        let temp: number = 0;
+        for (let i = 1; i < strArray2.length; i++) {
+            let value: string = this.BackpackTable[strArray2[i][0]].toString();
+
+            egret.localStorage.setItem(strArray2[i][0], value);
+
         }
     }
 
     public static Buy(id: string) {
         this.BackpackTable[id] += 1;
+        this.savebackpack();
     }
 
     public static save() {
@@ -146,15 +192,31 @@ class Data {
         var value: string = this.clovernumber.toString();
         egret.localStorage.setItem(this.key, value);
     }
-    public static loadgrasstime():number{
-        let timestr=egret.localStorage.getItem(this.grasstime);
-        let time=parseInt(timestr);
+    public static loadtime(str: string): number {
+        let timestr = egret.localStorage.getItem(str);
+        let time = parseInt(timestr);
         return time;
     }
-    public static savegrasstime(){
+    public static savetime(str: string) {
         let timestamp3 = new Date().getTime();
-        var value:string=timestamp3.toString();
-        egret.localStorage.setItem(this.grasstime,value);
+        var value: string = timestamp3.toString();
+        egret.localStorage.setItem(str, value);
     }
+
+    public static savestate() {
+
+        let myfrogstate = this.frogstate;
+        var value: string = myfrogstate.toString();
+        egret.localStorage.setItem(this.state, value);
+    }
+    public static changestate() {
+        if (this.frogstate == true) {
+            this.frogstate = false;
+        } else {
+            this.frogstate = true;
+        }
+    }
+
+
 
 }
